@@ -11,7 +11,7 @@ def fut_pair(symbol):
 def place_bracket(side, symbol, entry, tp, sl, qty):
     # timestamp in milliseconds
     timestamp = int(round(time.time() * 1000))
-    tp =  entry+math.floor((tp-entry)/3)
+    tp =  entry+math.ceil((tp-entry)/2)
 
     body = {
         "timestamp": timestamp,
